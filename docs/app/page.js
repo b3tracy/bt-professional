@@ -53,8 +53,8 @@ function Demo({ label, code, children, padded = true }) {
   );
 }
 
-// Reads what globals.css actually resolves each custom property to, so the page
-// can flag tokens where lib/theme.js has drifted from the stylesheet.
+// Reads what base-case.css actually resolves each custom property to, so the page
+// can flag tokens where src/tokens.js has drifted from the stylesheet.
 function readComputedTokens(mode) {
   const probe = document.createElement('div');
   if (mode === 'light') probe.className = 'theme-light';
@@ -177,14 +177,16 @@ export default function StyleguidePage() {
             <ViewToggle view={mode === 'dark' ? 'table' : 'profile'} onChange={v => { setMode(v === 'table' ? 'dark' : 'light'); setComputedTokens(null); }} isMobile={false} />
             <CopyButton label="Copy CSS variables" getText={themeCss} />
             <CopyButton label="Copy theme JSON" getText={() => JSON.stringify(themeJson(), null, 2)} />
-            <a className="btn" href="/api/theme" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none' }}>/api/theme</a>
+            <a className="btn" href="https://cdn.jsdelivr.net/gh/b3tracy/base-case-productivity@latest/tokens.json" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none' }}>tokens.json</a>
           </div>
         </header>
 
         <div style={{ marginTop: 20, padding: '12px 14px', background: 'var(--surface2)', border: '1px solid var(--border)', borderRadius: 8, fontSize: 12, color: 'var(--text-muted)', lineHeight: 1.65 }}>
-          Point an agent at <code style={{ color: 'var(--accent)' }}>/api/theme</code> (or paste the JSON) to reuse this theme in a new app:
-          it carries the font stacks, every CSS custom property for both the dark and light themes, the radius and control-height scale,
-          and the list of shared components with the files they live in. The dark/light toggle above swaps <code style={{ color: 'var(--accent)' }}>.theme-light</code> on this page only.
+          Install with <code style={{ color: 'var(--accent)' }}>npm i &quot;github:b3tracy/base-case-productivity#semver:^1.0.0&quot;</code>, then import
+          <code style={{ color: 'var(--accent)' }}> @b3tracy/base-case-productivity/styles.css</code> before your own CSS. Point an agent at
+          <a href="https://github.com/b3tracy/base-case-productivity/blob/main/AGENTS.md" style={{ color: 'var(--accent)' }}>AGENTS.md</a> or at
+          <code style={{ color: 'var(--accent)' }}>tokens.json</code>, which carries the font stacks, every custom property for both themes, the radius
+          and control-height scale, and the component inventory. The dark/light toggle above swaps <code style={{ color: 'var(--accent)' }}>.theme-light</code> on this page only.
         </div>
 
         <Section id="type" title="Typography" subtitle={`${FONTS.display.family} for display type, ${FONTS.body.family} for everything else. Base size ${FONTS.baseSize}.`}>
@@ -199,9 +201,9 @@ export default function StyleguidePage() {
           </div>
         </Section>
 
-        <Section id="color" title="Color tokens" subtitle="Declared in app/globals.css and mirrored in lib/theme.js.">
+        <Section id="color" title="Color tokens" subtitle="Declared in styles/base-case.css and mirrored in src/tokens.js.">
           <div style={{ display: 'flex', alignItems: 'center', gap: 10, marginBottom: 18 }}>
-            <button className="btn-ghost" onClick={() => setComputedTokens(readComputedTokens(mode))}>Check against globals.css</button>
+            <button className="btn-ghost" onClick={() => setComputedTokens(readComputedTokens(mode))}>Check against base-case.css</button>
             {computedTokens && <span style={{ fontSize: 11.5, color: 'var(--text-dim)' }}>Any token whose stylesheet value differs from this file is flagged in red below.</span>}
           </div>
           {COLOR_GROUPS.map(group => (
@@ -256,7 +258,7 @@ export default function StyleguidePage() {
         </Section>
 
         <Section id="chrome" title="Page chrome" subtitle="The header, filter and sort strip every list page is built from.">
-          <Demo label="HeaderBar + SearchBar + ViewToggle + StatPill" code="app/components/Toolbar.js" padded={false}>
+          <Demo label="HeaderBar + SearchBar + ViewToggle + StatPill" code="@b3tracy/base-case-productivity" padded={false}>
             <HeaderBar>
               <SearchBar value={search} onChange={setSearch} placeholder="Search contacts, company, industry…" />
               <div style={{ display: 'flex', gap: 8, alignItems: 'center' }}>
@@ -291,7 +293,7 @@ export default function StyleguidePage() {
               </div>
             </div>
           </Demo>
-          <Demo label="EmptyDetail + HintText" code="app/components/Toolbar.js">
+          <Demo label="EmptyDetail + HintText" code="@b3tracy/base-case-productivity">
             <div style={{ height: 150 }}>
               <EmptyDetail icon={<svg width="18" height="18" fill="none" stroke="var(--text-dim)" strokeWidth="1.5" viewBox="0 0 24 24"><circle cx="9" cy="7" r="4" /><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" /></svg>}>
                 Select a contact to view details
@@ -301,7 +303,7 @@ export default function StyleguidePage() {
         </Section>
 
         <Section id="detail" title="Detail pane" subtitle="Fields, badges and the interaction log used on every record.">
-          <Demo label="Field / RequiredField / WebsiteField" code=".fields-grid + app/components/Field.js">
+          <Demo label="Field / RequiredField / WebsiteField" code=".fields-grid + <Field /> from @b3tracy/base-case-productivity">
             <div className="section" style={{ paddingTop: 0 }}>
               <div className="section-title">Details</div>
               <div className="fields-grid">
@@ -322,7 +324,7 @@ export default function StyleguidePage() {
               <StatPill count={12} label="opportunities" />
             </div>
           </Demo>
-          <Demo label="InteractionLog" code="app/components/InteractionLog.js — fully interactive, in-memory">
+          <Demo label="InteractionLog" code="<InteractionLog /> — fully interactive, in-memory">
             <InteractionLog
               notes={notes}
               emptyText="No interactions yet."
@@ -359,7 +361,7 @@ export default function StyleguidePage() {
           </Demo>
         </Section>
 
-        <Section id="inventory" title="What ships with the theme" subtitle="Copy these files into a new app to get the same behavior, not just the same paint.">
+        <Section id="inventory" title="What ships with the theme" subtitle="Everything the package exports — behavior, not just paint.">
           <div className="section-title">Components and hooks</div>
           <div style={{ display: 'grid', gap: 8, marginBottom: 22 }}>
             {COMPONENTS.map(c => (
