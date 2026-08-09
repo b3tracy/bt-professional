@@ -28,7 +28,7 @@ jobs:
         run: npm install && npm run build
         working-directory: docs
         env:
-          PAGES_BASE_PATH: /base-case-productivity
+          PAGES_BASE_PATH: /bt-professional
       - run: touch docs/out/.nojekyll
       - uses: actions/upload-pages-artifact@v3
         with:

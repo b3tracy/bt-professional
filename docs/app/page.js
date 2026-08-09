@@ -177,14 +177,14 @@ export default function StyleguidePage() {
             <ViewToggle view={mode === 'dark' ? 'table' : 'profile'} onChange={v => { setMode(v === 'table' ? 'dark' : 'light'); setComputedTokens(null); }} isMobile={false} />
             <CopyButton label="Copy CSS variables" getText={themeCss} />
             <CopyButton label="Copy theme JSON" getText={() => JSON.stringify(themeJson(), null, 2)} />
-            <a className="btn" href="https://cdn.jsdelivr.net/gh/b3tracy/base-case-productivity@latest/tokens.json" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none' }}>tokens.json</a>
+            <a className="btn" href="https://cdn.jsdelivr.net/gh/b3tracy/bt-professional@latest/tokens.json" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none' }}>tokens.json</a>
           </div>
         </header>
 
         <div style={{ marginTop: 20, padding: '12px 14px', background: 'var(--surface2)', border: '1px solid var(--border)', borderRadius: 8, fontSize: 12, color: 'var(--text-muted)', lineHeight: 1.65 }}>
-          Install with <code style={{ color: 'var(--accent)' }}>npm i &quot;github:b3tracy/base-case-productivity#semver:^1.0.0&quot;</code>, then import
+          Install with <code style={{ color: 'var(--accent)' }}>npm i &quot;github:b3tracy/bt-professional#semver:^1.0.0&quot;</code>, then import
           <code style={{ color: 'var(--accent)' }}> @b3tracy/base-case-productivity/styles.css</code> before your own CSS. Point an agent at
-          <a href="https://github.com/b3tracy/base-case-productivity/blob/main/AGENTS.md" style={{ color: 'var(--accent)' }}>AGENTS.md</a> or at
+          <a href="https://github.com/b3tracy/bt-professional/blob/main/AGENTS.md" style={{ color: 'var(--accent)' }}>AGENTS.md</a> or at
           <code style={{ color: 'var(--accent)' }}>tokens.json</code>, which carries the font stacks, every custom property for both themes, the radius
           and control-height scale, and the component inventory. The dark/light toggle above swaps <code style={{ color: 'var(--accent)' }}>.theme-light</code> on this page only.
         </div>

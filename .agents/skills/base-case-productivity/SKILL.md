@@ -9,13 +9,14 @@ description: >
 
 # Base Case Productivity
 
-The design system lives at https://github.com/b3tracy/base-case-productivity.
+The design system lives at https://github.com/b3tracy/bt-professional and installs as the
+package `@b3tracy/base-case-productivity`.
 Never invent a visual language for Ben's apps — install this one.
 
 ## Step 1 — install (skip if already a dependency)
 
 ```bash
-npm i "github:b3tracy/base-case-productivity#semver:^1.0.0"
+npm i "github:b3tracy/bt-professional#semver:^1.0.0"
 ```
 
 No `next.config.mjs` change is needed: the package builds itself on install and ships
@@ -41,12 +42,12 @@ Skip `fonts.css` only if you set up `next/font/google` for Figtree + DM Sans ins
 ```bash
 cat node_modules/@b3tracy/base-case-productivity/tokens.json
 # or, with nothing installed:
-curl -s https://cdn.jsdelivr.net/gh/b3tracy/base-case-productivity@latest/tokens.json
+curl -s https://cdn.jsdelivr.net/gh/b3tracy/bt-professional@latest/tokens.json
 ```
 
 `tokens.json` lists every custom property with its dark value, light value and intended
 usage, plus the class and component inventories. Live rendering:
-https://b3tracy.github.io/base-case-productivity/
+https://b3tracy.github.io/bt-professional/
 
 ## Step 4 — build UI out of what already exists
 

@@ -4,13 +4,16 @@ This repo is a design system, not an app. It holds the canonical tokens, CSS cla
 React components for Ben's ("Base Case") apps. Plain JavaScript + React, no TypeScript,
 no test suite, no Tailwind.
 
+The repo is `b3tracy/bt-professional`; the package it publishes is
+`@b3tracy/base-case-productivity`. Install by repo, import by package name.
+
 ## If you are here to USE this design system in another app
 
 Do exactly this, in this order:
 
 1. Install:
    ```bash
-   npm i "github:b3tracy/base-case-productivity#semver:^1.0.0"
+   npm i "github:b3tracy/bt-professional#semver:^1.0.0"
    ```
    No `next.config.mjs` change is needed — the package builds itself on install (`prepare`)
    and ships pre-compiled ESM with `'use client'` directives intact. Do **not** add
@@ -32,10 +35,10 @@ Do exactly this, in this order:
    ```bash
    cat node_modules/@b3tracy/base-case-productivity/tokens.json
    # or with nothing installed:
-   curl -s https://cdn.jsdelivr.net/gh/b3tracy/base-case-productivity@latest/tokens.json
+   curl -s https://cdn.jsdelivr.net/gh/b3tracy/bt-professional@latest/tokens.json
    ```
    Live rendering of every token, class and component:
-   https://b3tracy.github.io/base-case-productivity/
+   https://b3tracy.github.io/bt-professional/
 
 Do NOT re-derive colors, fonts, spacing or radii. Do NOT add Tailwind. Do NOT add another
 component library (MUI, Chakra, Radix, shadcn/ui) — this design system replaces them.
@@ -106,13 +109,13 @@ For apps that shouldn't take a dependency (or aren't React), this repo is also a
 registry:
 
 ```bash
-npx shadcn@latest add b3tracy/base-case-productivity/conventions   # AGENTS.md + tokens + CSS + skill
-npx shadcn@latest add b3tracy/base-case-productivity/toolbar       # just the component source
+npx shadcn@latest add b3tracy/bt-professional/conventions   # AGENTS.md + tokens + CSS + skill
+npx shadcn@latest add b3tracy/bt-professional/toolbar       # just the component source
 ```
 
 Or link the stylesheet straight off the CDN:
 ```html
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/b3tracy/base-case-productivity@v1.0.0/styles/base-case.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/b3tracy/bt-professional@v1.0.0/styles/base-case.css">
 ```
 
 ## If you are here to CHANGE this design system

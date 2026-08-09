@@ -6,9 +6,9 @@
   "author": "Ben Tracy",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/b3tracy/base-case-productivity.git"
+    "url": "git+https://github.com/b3tracy/bt-professional.git"
   },
-  "homepage": "https://b3tracy.github.io/base-case-productivity/",
+  "homepage": "https://b3tracy.github.io/bt-professional/",
   "type": "module",
   "sideEffects": [
     "*.css"

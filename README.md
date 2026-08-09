@@ -4,16 +4,18 @@ Design tokens, CSS classes and React components behind Ben's apps: dense, dark-f
 low-chrome productivity UI — one muted sage accent, Figtree + DM Sans, small radii,
 28–32px controls.
 
-**Live style guide:** https://b3tracy.github.io/base-case-productivity/
+**Live style guide:** https://b3tracy.github.io/bt-professional/
 **Machine-readable tokens:** [`tokens.json`](./tokens.json) ·
-[via CDN](https://cdn.jsdelivr.net/gh/b3tracy/base-case-productivity@latest/tokens.json)
+[via CDN](https://cdn.jsdelivr.net/gh/b3tracy/bt-professional@latest/tokens.json)
 **Working with an AI agent?** Point it at [AGENTS.md](./AGENTS.md).
 
 ## Install
 
 ```bash
-npm i "github:b3tracy/base-case-productivity#semver:^1.0.0"
+npm i "github:b3tracy/bt-professional#semver:^1.0.0"
 ```
+
+Installed from this repo, imported as `@b3tracy/base-case-productivity`.
 
 Plain JS + React, published straight from git tags — no registry, and no build config in the
 consuming app: the package compiles itself on install and ships ESM with `'use client'`
@@ -46,14 +48,14 @@ export default function Page() {
 Not a React app? Link the stylesheet and use the custom properties:
 
 ```html
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/b3tracy/base-case-productivity@v1.0.0/styles/base-case.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/b3tracy/bt-professional@v1.0.0/styles/base-case.css">
 ```
 
 Prefer owning the code (shadcn-style) over a dependency:
 
 ```bash
-npx shadcn@latest add b3tracy/base-case-productivity/conventions
-npx shadcn@latest add b3tracy/base-case-productivity/toolbar
+npx shadcn@latest add b3tracy/bt-professional/conventions
+npx shadcn@latest add b3tracy/bt-professional/toolbar
 ```
 
 ## What's inside
