@@ -1,0 +1,77 @@
+{
+  "name": "@b3tracy/base-case-productivity",
+  "version": "1.0.0",
+  "description": "Base Case Productivity \u2014 dense, dark-first productivity UI: design tokens, CSS classes and React components.",
+  "license": "MIT",
+  "author": "Ben Tracy",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/b3tracy/base-case-productivity.git"
+  },
+  "homepage": "https://b3tracy.github.io/base-case-productivity/",
+  "type": "module",
+  "sideEffects": [
+    "*.css"
+  ],
+  "files": [
+    "dist",
+    "src",
+    "styles",
+    "tokens.json",
+    "registry.json",
+    "AGENTS.md"
+  ],
+  "exports": {
+    ".": {
+      "default": "./dist/index.js"
+    },
+    "./tokens": {
+      "default": "./dist/tokens.js"
+    },
+    "./hooks": {
+      "default": "./dist/lib/hooks.js"
+    },
+    "./format": {
+      "default": "./dist/lib/format.js"
+    },
+    "./notes": {
+      "default": "./dist/lib/notes.js"
+    },
+    "./swipe": {
+      "default": "./dist/lib/swipe.js"
+    },
+    "./styles.css": "./styles/base-case.css",
+    "./fonts.css": "./styles/fonts.css",
+    "./tokens.json": "./tokens.json",
+    "./package.json": "./package.json"
+  },
+  "scripts": {
+    "build": "esbuild src/index.js src/tokens.js src/components/*.js src/lib/*.js --outdir=dist --outbase=src --format=esm --jsx=automatic --loader:.js=jsx --platform=browser --target=es2022",
+    "tokens": "node scripts/gen-tokens.mjs",
+    "prepare": "npm run build",
+    "docs": "npm --prefix docs run dev",
+    "docs:build": "npm --prefix docs run build"
+  },
+  "peerDependencies": {
+    "react": ">=18",
+    "react-dom": ">=18"
+  },
+  "peerDependenciesMeta": {
+    "react-dom": {
+      "optional": true
+    }
+  },
+  "devDependencies": {
+    "esbuild": "^0.25.0"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "keywords": [
+    "design-system",
+    "design-tokens",
+    "react",
+    "ui",
+    "dark-theme"
+  ]
+}

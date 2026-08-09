@@ -1,0 +1,169 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry.json",
+  "name": "base-case-productivity",
+  "homepage": "https://b3tracy.github.io/base-case-productivity/",
+  "items": [
+    {
+      "name": "conventions",
+      "type": "registry:item",
+      "title": "Base Case Productivity conventions",
+      "description": "Agent instructions, design tokens, the stylesheet and the agent skill.",
+      "files": [
+        {
+          "path": "AGENTS.md",
+          "type": "registry:file",
+          "target": "~/AGENTS.md"
+        },
+        {
+          "path": "styles/base-case.css",
+          "type": "registry:file",
+          "target": "~/styles/base-case.css"
+        },
+        {
+          "path": "styles/fonts.css",
+          "type": "registry:file",
+          "target": "~/styles/fonts.css"
+        },
+        {
+          "path": "tokens.json",
+          "type": "registry:file",
+          "target": "~/tokens.json"
+        },
+        {
+          "path": ".agents/skills/base-case-productivity/SKILL.md",
+          "type": "registry:file",
+          "target": "~/.agents/skills/base-case-productivity/SKILL.md"
+        }
+      ]
+    },
+    {
+      "name": "tokens",
+      "type": "registry:item",
+      "title": "Design tokens",
+      "description": "Tokens as JS and JSON, plus the stylesheet.",
+      "files": [
+        {
+          "path": "src/tokens.js",
+          "type": "registry:lib",
+          "target": "~/lib/theme.js"
+        },
+        {
+          "path": "tokens.json",
+          "type": "registry:file",
+          "target": "~/tokens.json"
+        },
+        {
+          "path": "styles/base-case.css",
+          "type": "registry:file",
+          "target": "~/styles/base-case.css"
+        }
+      ]
+    },
+    {
+      "name": "toolbar",
+      "type": "registry:component",
+      "title": "Toolbar kit",
+      "description": "PageShell, HeaderBar, SearchBar, ViewToggle, StatPill, FilterBar, FilterSelect, SortControls, ListGroupHeader, HintText, EmptyDetail.",
+      "files": [
+        {
+          "path": "src/components/Toolbar.js",
+          "type": "registry:component",
+          "target": "~/components/Toolbar.js"
+        }
+      ]
+    },
+    {
+      "name": "field",
+      "type": "registry:component",
+      "title": "Field",
+      "description": "Field, RequiredField, WebsiteField label+value display.",
+      "files": [
+        {
+          "path": "src/components/Field.js",
+          "type": "registry:component",
+          "target": "~/components/Field.js"
+        },
+        {
+          "path": "src/lib/format.js",
+          "type": "registry:lib",
+          "target": "~/lib/format.js"
+        }
+      ]
+    },
+    {
+      "name": "interaction-log",
+      "type": "registry:component",
+      "title": "Interaction log",
+      "description": "Dated note list with inline edit and an add form.",
+      "files": [
+        {
+          "path": "src/components/InteractionLog.js",
+          "type": "registry:component",
+          "target": "~/components/InteractionLog.js"
+        },
+        {
+          "path": "src/lib/format.js",
+          "type": "registry:lib",
+          "target": "~/lib/format.js"
+        },
+        {
+          "path": "src/lib/notes.js",
+          "type": "registry:lib",
+          "target": "~/lib/notes.js"
+        }
+      ]
+    },
+    {
+      "name": "column-picker",
+      "type": "registry:component",
+      "title": "Column picker",
+      "description": "Right-click column visibility menu.",
+      "files": [
+        {
+          "path": "src/components/ColumnPicker.js",
+          "type": "registry:component",
+          "target": "~/components/ColumnPicker.js"
+        }
+      ]
+    },
+    {
+      "name": "undo-toast",
+      "type": "registry:component",
+      "title": "Undo toast stack",
+      "description": "Bottom-center undo toasts for deferred deletes.",
+      "files": [
+        {
+          "path": "src/components/UndoToast.js",
+          "type": "registry:component",
+          "target": "~/components/UndoToast.js"
+        }
+      ]
+    },
+    {
+      "name": "auth-card",
+      "type": "registry:component",
+      "title": "Auth card",
+      "description": "360px centered auth card with brand/tagline props and its controls.",
+      "files": [
+        {
+          "path": "src/components/AuthCard.js",
+          "type": "registry:component",
+          "target": "~/components/AuthCard.js"
+        }
+      ]
+    },
+    {
+      "name": "hooks",
+      "type": "registry:hook",
+      "title": "Hooks",
+      "description": "useIsMobile, usePersistentState, usePaneResize, useColumnWidths, useColumnPicker, useUndoableDelete, useUndoShortcut.",
+      "files": [
+        {
+          "path": "src/lib/hooks.js",
+          "type": "registry:hook",
+          "target": "~/lib/hooks.js"
+        }
+      ]
+    }
+  ]
+}

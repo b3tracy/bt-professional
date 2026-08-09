@@ -1,0 +1,2 @@
+/* The style guide scrolls; the design system's body rule does not. */
+body { overflow: auto; height: auto; min-height: 100dvh; }
