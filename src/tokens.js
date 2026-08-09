@@ -1,10 +1,10 @@
-// "Base Case Productivity" — the design system shared by every one of Ben's apps.
+// "BT Professional" — the design system shared by every one of Ben's apps.
 // This file is the machine-readable copy of the tokens declared in
-// styles/base-case.css; docs/ renders both and flags any token whose computed
+// styles/bt-professional.css; docs/ renders both and flags any token whose computed
 // value has drifted from the value declared here. `npm run tokens` regenerates
 // tokens.json from this file and fails if a token is missing from the stylesheet.
 
-export const THEME_NAME = 'Base Case Productivity';
+export const THEME_NAME = 'BT Professional';
 export const THEME_VERSION = '1.0.0';
 export const THEME_DESCRIPTION =
   'Dense, low-chrome productivity UI: near-black depth hierarchy, a single muted sage accent, ' +
@@ -28,7 +28,7 @@ export const FONTS = {
   baseSize: '12.5px',
 };
 
-// Groups mirror the comment blocks in styles/base-case.css so the styleguide can render
+// Groups mirror the comment blocks in styles/bt-professional.css so the styleguide can render
 // them in the same order the stylesheet declares them.
 export const COLOR_GROUPS = [
   {
@@ -114,11 +114,11 @@ export const LAYOUT = {
 };
 
 export const STYLESHEETS = [
-  { specifier: '@b3tracy/base-case-productivity/styles.css', usage: 'Tokens, resets and global classes. Import before any app CSS.' },
-  { specifier: '@b3tracy/base-case-productivity/fonts.css', usage: 'Google Fonts import for Figtree + DM Sans. Skip it if you use next/font.' },
+  { specifier: '@b3tracy/bt-professional/styles.css', usage: 'Tokens, resets and global classes. Import before any app CSS.' },
+  { specifier: '@b3tracy/bt-professional/fonts.css', usage: 'Google Fonts import for Figtree + DM Sans. Skip it if you use next/font.' },
 ];
 
-// Classes that live in styles/base-case.css; components below assume they are present.
+// Classes that live in styles/bt-professional.css; components below assume they are present.
 export const CSS_CLASSES = [
   { name: '.btn', usage: 'Primary button (accent fill, 30px tall)' },
   { name: '.btn-ghost', usage: 'Secondary button (border only, accent on hover)' },
@@ -136,16 +136,16 @@ export const CSS_CLASSES = [
 // Reusable building blocks published with the theme, so a new app can copy the
 // files rather than re-deriving the patterns.
 export const COMPONENTS = [
-  { name: 'PageShell / HeaderBar / SearchBar', file: 'src/components/Toolbar.js', import: '@b3tracy/base-case-productivity', usage: 'Full-height page frame with a search + actions header' },
-  { name: 'ViewToggle / StatPill', file: 'src/components/Toolbar.js', import: '@b3tracy/base-case-productivity', usage: 'Table↔profile switch and inline counts' },
-  { name: 'FilterBar / FilterSelect / SortControls / SortArrow', file: 'src/components/Toolbar.js', import: '@b3tracy/base-case-productivity', usage: 'Filter and sort chrome; selects highlight when active' },
-  { name: 'ListGroupHeader / HintText / EmptyDetail', file: 'src/components/Toolbar.js', import: '@b3tracy/base-case-productivity', usage: 'List dividers, loading/empty copy, empty detail pane' },
-  { name: 'Field / RequiredField / WebsiteField', file: 'src/components/Field.js', import: '@b3tracy/base-case-productivity', usage: 'Label+value display; required flags missing data in red' },
-  { name: 'InteractionLog', file: 'src/components/InteractionLog.js', import: '@b3tracy/base-case-productivity', usage: 'Dated note list with inline edit and an add form; pass `methods` to relabel the tags' },
-  { name: 'ColumnPicker', file: 'src/components/ColumnPicker.js', import: '@b3tracy/base-case-productivity', usage: 'Right-click column visibility menu' },
-  { name: 'UndoToastStack', file: 'src/components/UndoToast.js', import: '@b3tracy/base-case-productivity', usage: 'Bottom-center undo toasts for deferred deletes' },
-  { name: 'AuthCard / PrimaryButton / LinkButton / ErrorText', file: 'src/components/AuthCard.js', import: '@b3tracy/base-case-productivity', usage: '360px centered auth card and its controls; `brand` and `tagline` are props' },
-  { name: 'useIsMobile / usePersistentState / usePaneResize / useColumnWidths / useColumnPicker / useUndoableDelete / useUndoShortcut', file: 'src/lib/hooks.js', import: '@b3tracy/base-case-productivity/hooks', usage: 'Behavior behind the components above' },
+  { name: 'PageShell / HeaderBar / SearchBar', file: 'src/components/Toolbar.js', import: '@b3tracy/bt-professional', usage: 'Full-height page frame with a search + actions header' },
+  { name: 'ViewToggle / StatPill', file: 'src/components/Toolbar.js', import: '@b3tracy/bt-professional', usage: 'Table↔profile switch and inline counts' },
+  { name: 'FilterBar / FilterSelect / SortControls / SortArrow', file: 'src/components/Toolbar.js', import: '@b3tracy/bt-professional', usage: 'Filter and sort chrome; selects highlight when active' },
+  { name: 'ListGroupHeader / HintText / EmptyDetail', file: 'src/components/Toolbar.js', import: '@b3tracy/bt-professional', usage: 'List dividers, loading/empty copy, empty detail pane' },
+  { name: 'Field / RequiredField / WebsiteField', file: 'src/components/Field.js', import: '@b3tracy/bt-professional', usage: 'Label+value display; required flags missing data in red' },
+  { name: 'InteractionLog', file: 'src/components/InteractionLog.js', import: '@b3tracy/bt-professional', usage: 'Dated note list with inline edit and an add form; pass `methods` to relabel the tags' },
+  { name: 'ColumnPicker', file: 'src/components/ColumnPicker.js', import: '@b3tracy/bt-professional', usage: 'Right-click column visibility menu' },
+  { name: 'UndoToastStack', file: 'src/components/UndoToast.js', import: '@b3tracy/bt-professional', usage: 'Bottom-center undo toasts for deferred deletes' },
+  { name: 'AuthCard / PrimaryButton / LinkButton / ErrorText', file: 'src/components/AuthCard.js', import: '@b3tracy/bt-professional', usage: '360px centered auth card and its controls; `brand` and `tagline` are props' },
+  { name: 'useIsMobile / usePersistentState / usePaneResize / useColumnWidths / useColumnPicker / useUndoableDelete / useUndoShortcut', file: 'src/lib/hooks.js', import: '@b3tracy/bt-professional/hooks', usage: 'Behavior behind the components above' },
 ];
 
 export function themeJson() {
@@ -153,7 +153,7 @@ export function themeJson() {
     name: THEME_NAME,
     version: THEME_VERSION,
     description: THEME_DESCRIPTION,
-    package: '@b3tracy/base-case-productivity',
+    package: '@b3tracy/bt-professional',
     install: 'npm i "github:b3tracy/bt-professional#semver:^1.0.0"',
     docs: 'https://b3tracy.github.io/bt-professional/',
     fonts: FONTS,

@@ -1,4 +1,4 @@
-// Base Case Productivity — public entry point.
+// BT Professional — public entry point.
 // Components and hooks are also available on subpaths (see package.json "exports").
 
 export {

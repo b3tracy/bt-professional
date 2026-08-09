@@ -1,9 +1,9 @@
-import '@b3tracy/base-case-productivity/fonts.css';
-import '@b3tracy/base-case-productivity/styles.css';
+import '@b3tracy/bt-professional/fonts.css';
+import '@b3tracy/bt-professional/styles.css';
 import './docs.css';
 
 export const metadata = {
-  title: 'Base Case Productivity',
+  title: 'BT Professional',
   description: 'Design tokens, CSS classes and React components for Ben\'s apps.',
 };
 

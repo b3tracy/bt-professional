@@ -1,11 +1,11 @@
-# AGENTS.md — Base Case Productivity
+# AGENTS.md — BT Professional
 
 This repo is a design system, not an app. It holds the canonical tokens, CSS classes and
-React components for Ben's ("Base Case") apps. Plain JavaScript + React, no TypeScript,
+React components for Ben's apps. Plain JavaScript + React, no TypeScript,
 no test suite, no Tailwind.
 
 The repo is `b3tracy/bt-professional`; the package it publishes is
-`@b3tracy/base-case-productivity`. Install by repo, import by package name.
+`@b3tracy/bt-professional`. Install by repo, import by package name.
 
 ## If you are here to USE this design system in another app
 
@@ -21,19 +21,19 @@ Do exactly this, in this order:
 2. Import the stylesheet **before** any app CSS, so token definitions land first and app
    rules still win the cascade. Next.js App Router — `app/layout.js`:
    ```js
-   import '@b3tracy/base-case-productivity/fonts.css';   // omit if you use next/font (see below)
-   import '@b3tracy/base-case-productivity/styles.css';
+   import '@b3tracy/bt-professional/fonts.css';   // omit if you use next/font (see below)
+   import '@b3tracy/bt-professional/styles.css';
    import './globals.css';
    ```
    Vite / CRA: the same imports at the top of `src/main.jsx`.
 3. Import components from the package root, hooks from `/hooks`:
    ```js
-   import { PageShell, HeaderBar, SearchBar, StatPill, Field } from '@b3tracy/base-case-productivity';
-   import { useIsMobile } from '@b3tracy/base-case-productivity/hooks';
+   import { PageShell, HeaderBar, SearchBar, StatPill, Field } from '@b3tracy/bt-professional';
+   import { useIsMobile } from '@b3tracy/bt-professional/hooks';
    ```
 4. Read `tokens.json` before writing any styles:
    ```bash
-   cat node_modules/@b3tracy/base-case-productivity/tokens.json
+   cat node_modules/@b3tracy/bt-professional/tokens.json
    # or with nothing installed:
    curl -s https://cdn.jsdelivr.net/gh/b3tracy/bt-professional@latest/tokens.json
    ```
@@ -115,12 +115,12 @@ npx shadcn@latest add b3tracy/bt-professional/toolbar       # just the component
 
 Or link the stylesheet straight off the CDN:
 ```html
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/b3tracy/bt-professional@v1.0.0/styles/base-case.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/b3tracy/bt-professional@v1.0.0/styles/bt-professional.css">
 ```
 
 ## If you are here to CHANGE this design system
 
-- `src/tokens.js` is the source of truth for token *values*; `styles/base-case.css` is the
+- `src/tokens.js` is the source of truth for token *values*; `styles/bt-professional.css` is the
   source of truth for the *cascade*. They must agree — run `npm run tokens` after editing
   either (it regenerates `tokens.json` and fails if a token is missing from the stylesheet).
 - Components must stay app-agnostic: no data fetching, no Supabase, no router imports, no
@@ -141,7 +141,7 @@ src/tokens.js          token values, themeCss(), themeJson()
 src/index.js           public barrel
 src/components/*.js    React components
 src/lib/*.js           hooks + utilities
-styles/base-case.css   tokens, resets, global classes
+styles/bt-professional.css   tokens, resets, global classes
 styles/fonts.css       Google Fonts @import
 scripts/gen-tokens.mjs tokens.json generator + drift check
 tokens.json            generated; the machine-readable contract

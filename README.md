@@ -1,4 +1,4 @@
-# Base Case Productivity
+# BT Professional
 
 Design tokens, CSS classes and React components behind Ben's apps: dense, dark-first,
 low-chrome productivity UI — one muted sage accent, Figtree + DM Sans, small radii,
@@ -15,7 +15,7 @@ low-chrome productivity UI — one muted sage accent, Figtree + DM Sans, small r
 npm i "github:b3tracy/bt-professional#semver:^1.0.0"
 ```
 
-Installed from this repo, imported as `@b3tracy/base-case-productivity`.
+Installed from this repo, imported as `@b3tracy/bt-professional`.
 
 Plain JS + React, published straight from git tags — no registry, and no build config in the
 consuming app: the package compiles itself on install and ships ESM with `'use client'`
@@ -25,21 +25,21 @@ preserved, so it works in the Next.js App Router and in Vite without `transpileP
 
 ```js
 // app/layout.js
-import '@b3tracy/base-case-productivity/fonts.css';
-import '@b3tracy/base-case-productivity/styles.css';
+import '@b3tracy/bt-professional/fonts.css';
+import '@b3tracy/bt-professional/styles.css';
 import './globals.css';   // your overrides come after
 ```
 
 ```js
 // app/page.js
-import { PageShell, HeaderBar, StatPill, Field } from '@b3tracy/base-case-productivity';
-import { useIsMobile } from '@b3tracy/base-case-productivity/hooks';
+import { PageShell, HeaderBar, StatPill, Field } from '@b3tracy/bt-professional';
+import { useIsMobile } from '@b3tracy/bt-professional/hooks';
 
 export default function Page() {
   return (
     <PageShell>
       <HeaderBar title="Contacts"><StatPill label="Total" value={42} /></HeaderBar>
-      <Field label="Company" value="Base Case" />
+      <Field label="Company" value="Base Case Partners" />
     </PageShell>
   );
 }
@@ -48,7 +48,7 @@ export default function Page() {
 Not a React app? Link the stylesheet and use the custom properties:
 
 ```html
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/b3tracy/bt-professional@v1.0.0/styles/base-case.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/b3tracy/bt-professional@v1.0.0/styles/bt-professional.css">
 ```
 
 Prefer owning the code (shadcn-style) over a dependency:
@@ -63,7 +63,7 @@ npx shadcn@latest add b3tracy/bt-professional/toolbar
 | | |
 |---|---|
 | `src/tokens.js` | token values + `themeCss()` / `themeJson()` |
-| `styles/base-case.css` | `:root` dark theme, `.theme-light`, global classes |
+| `styles/bt-professional.css` | `:root` dark theme, `.theme-light`, global classes |
 | `styles/fonts.css` | Google Fonts import (skip it if you use `next/font`) |
 | `src/components/` | Toolbar kit, Field, InteractionLog, ColumnPicker, UndoToast, AuthCard |
 | `src/lib/` | hooks (`useIsMobile`, `usePersistentState`, `usePaneResize`, `useColumnWidths`, `useColumnPicker`, `useUndoableDelete`, `useUndoShortcut`), formatters, note helpers, swipe |

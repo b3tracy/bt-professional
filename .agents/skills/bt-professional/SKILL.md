@@ -1,16 +1,16 @@
 ---
-name: base-case-productivity
+name: bt-professional
 description: >
-  Use when building or restyling any of Ben's apps so the UI matches the "Base Case
-  Productivity" design system — dark-first, single sage accent, Figtree + DM Sans, dense
-  productivity layout. Invoke at the START of any task that scaffolds a new app, adds a
+  Use when building or restyling any of Ben's apps so the UI matches the "BT Professional"
+  design system — dark-first, single sage accent, Figtree + DM Sans, dense productivity
+  layout. Invoke at the START of any task that scaffolds a new app, adds a
   page, or touches styling, colors, fonts, buttons, tables, lists, modals or layout.
 ---
 
-# Base Case Productivity
+# BT Professional
 
 The design system lives at https://github.com/b3tracy/bt-professional and installs as the
-package `@b3tracy/base-case-productivity`.
+package `@b3tracy/bt-professional`.
 Never invent a visual language for Ben's apps — install this one.
 
 ## Step 1 — install (skip if already a dependency)
@@ -30,8 +30,8 @@ win the cascade.
 Next.js App Router — `app/layout.js` (Vite: same lines at the top of `src/main.jsx`):
 
 ```js
-import '@b3tracy/base-case-productivity/fonts.css';
-import '@b3tracy/base-case-productivity/styles.css';
+import '@b3tracy/bt-professional/fonts.css';
+import '@b3tracy/bt-professional/styles.css';
 import './globals.css';
 ```
 
@@ -40,7 +40,7 @@ Skip `fonts.css` only if you set up `next/font/google` for Figtree + DM Sans ins
 ## Step 3 — read the tokens before writing any styles
 
 ```bash
-cat node_modules/@b3tracy/base-case-productivity/tokens.json
+cat node_modules/@b3tracy/bt-professional/tokens.json
 # or, with nothing installed:
 curl -s https://cdn.jsdelivr.net/gh/b3tracy/bt-professional@latest/tokens.json
 ```
@@ -55,9 +55,9 @@ https://b3tracy.github.io/bt-professional/
 import { PageShell, HeaderBar, SearchBar, ViewToggle, StatPill, FilterBar, FilterSelect,
          SortControls, SortArrow, ListGroupHeader, HintText, EmptyDetail, Field,
          RequiredField, WebsiteField, UndoToastStack, ColumnPicker, InteractionLog,
-         AuthCard, PrimaryButton, LinkButton, ErrorText } from '@b3tracy/base-case-productivity';
+         AuthCard, PrimaryButton, LinkButton, ErrorText } from '@b3tracy/bt-professional';
 import { useIsMobile, usePersistentState, usePaneResize, useColumnWidths, useColumnPicker,
-         useUndoableDelete, useUndoShortcut } from '@b3tracy/base-case-productivity/hooks';
+         useUndoableDelete, useUndoShortcut } from '@b3tracy/bt-professional/hooks';
 ```
 
 Escalation order for anything not covered: existing global class (`.btn`, `.btn-ghost`,

@@ -1,12 +1,12 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry.json",
-  "name": "base-case-productivity",
+  "name": "bt-professional",
   "homepage": "https://b3tracy.github.io/bt-professional/",
   "items": [
     {
       "name": "conventions",
       "type": "registry:item",
-      "title": "Base Case Productivity conventions",
+      "title": "BT Professional conventions",
       "description": "Agent instructions, design tokens, the stylesheet and the agent skill.",
       "files": [
         {
@@ -15,9 +15,9 @@
           "target": "~/AGENTS.md"
         },
         {
-          "path": "styles/base-case.css",
+          "path": "styles/bt-professional.css",
           "type": "registry:file",
-          "target": "~/styles/base-case.css"
+          "target": "~/styles/bt-professional.css"
         },
         {
           "path": "styles/fonts.css",
@@ -30,9 +30,9 @@
           "target": "~/tokens.json"
         },
         {
-          "path": ".agents/skills/base-case-productivity/SKILL.md",
+          "path": ".agents/skills/bt-professional/SKILL.md",
           "type": "registry:file",
-          "target": "~/.agents/skills/base-case-productivity/SKILL.md"
+          "target": "~/.agents/skills/bt-professional/SKILL.md"
         }
       ]
     },
@@ -53,9 +53,9 @@
           "target": "~/tokens.json"
         },
         {
-          "path": "styles/base-case.css",
+          "path": "styles/bt-professional.css",
           "type": "registry:file",
-          "target": "~/styles/base-case.css"
+          "target": "~/styles/bt-professional.css"
         }
       ]
     },

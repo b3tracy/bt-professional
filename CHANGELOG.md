@@ -2,7 +2,7 @@
 
 ## 1.0.0
 
-Initial extraction from `b3tracy/bft-dashboard`: design tokens, `styles/base-case.css`,
+Initial extraction from `b3tracy/bft-dashboard`: design tokens, `styles/bt-professional.css`,
 the Toolbar kit, `Field`, `InteractionLog`, `ColumnPicker`, `UndoToastStack`, `AuthCard`,
 hooks and utilities, plus the style guide (`docs/`) and the agent layer (`AGENTS.md`,
 `SKILL.md`, `registry.json`, `tokens.json`).

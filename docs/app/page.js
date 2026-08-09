@@ -3,14 +3,14 @@ import { useState } from 'react';
 import {
   COLOR_GROUPS, COMPONENTS, CSS_CLASSES, FONTS, LAYOUT, RADII,
   THEME_DESCRIPTION, THEME_NAME, THEME_VERSION, themeCss, themeJson,
-} from '@b3tracy/base-case-productivity/tokens';
-import { useColumnPicker, useIsMobile, useUndoableDelete } from '@b3tracy/base-case-productivity/hooks';
+} from '@b3tracy/bt-professional/tokens';
+import { useColumnPicker, useIsMobile, useUndoableDelete } from '@b3tracy/bt-professional/hooks';
 import {
   authInputStyle, ColumnPicker, EmptyDetail, ErrorText, Field, FilterBar, FilterSelect,
   HeaderBar, HintText, InteractionLog, LinkButton, ListGroupHeader, PrimaryButton,
   RequiredField, SearchBar, SortArrow, SortControls, StatPill, UndoToastStack,
   ViewToggle, WebsiteField,
-} from '@b3tracy/base-case-productivity';
+} from '@b3tracy/bt-professional';
 
 const DEMO_COLS = [
   { key: 'Company' }, { key: 'Name' }, { key: 'Industry' },
@@ -53,7 +53,7 @@ function Demo({ label, code, children, padded = true }) {
   );
 }
 
-// Reads what base-case.css actually resolves each custom property to, so the page
+// Reads what bt-professional.css actually resolves each custom property to, so the page
 // can flag tokens where src/tokens.js has drifted from the stylesheet.
 function readComputedTokens(mode) {
   const probe = document.createElement('div');
@@ -183,7 +183,7 @@ export default function StyleguidePage() {
 
         <div style={{ marginTop: 20, padding: '12px 14px', background: 'var(--surface2)', border: '1px solid var(--border)', borderRadius: 8, fontSize: 12, color: 'var(--text-muted)', lineHeight: 1.65 }}>
           Install with <code style={{ color: 'var(--accent)' }}>npm i &quot;github:b3tracy/bt-professional#semver:^1.0.0&quot;</code>, then import
-          <code style={{ color: 'var(--accent)' }}> @b3tracy/base-case-productivity/styles.css</code> before your own CSS. Point an agent at
+          <code style={{ color: 'var(--accent)' }}> @b3tracy/bt-professional/styles.css</code> before your own CSS. Point an agent at
           <a href="https://github.com/b3tracy/bt-professional/blob/main/AGENTS.md" style={{ color: 'var(--accent)' }}>AGENTS.md</a> or at
           <code style={{ color: 'var(--accent)' }}>tokens.json</code>, which carries the font stacks, every custom property for both themes, the radius
           and control-height scale, and the component inventory. The dark/light toggle above swaps <code style={{ color: 'var(--accent)' }}>.theme-light</code> on this page only.
@@ -201,9 +201,9 @@ export default function StyleguidePage() {
           </div>
         </Section>
 
-        <Section id="color" title="Color tokens" subtitle="Declared in styles/base-case.css and mirrored in src/tokens.js.">
+        <Section id="color" title="Color tokens" subtitle="Declared in styles/bt-professional.css and mirrored in src/tokens.js.">
           <div style={{ display: 'flex', alignItems: 'center', gap: 10, marginBottom: 18 }}>
-            <button className="btn-ghost" onClick={() => setComputedTokens(readComputedTokens(mode))}>Check against base-case.css</button>
+            <button className="btn-ghost" onClick={() => setComputedTokens(readComputedTokens(mode))}>Check against bt-professional.css</button>
             {computedTokens && <span style={{ fontSize: 11.5, color: 'var(--text-dim)' }}>Any token whose stylesheet value differs from this file is flagged in red below.</span>}
           </div>
           {COLOR_GROUPS.map(group => (
@@ -258,7 +258,7 @@ export default function StyleguidePage() {
         </Section>
 
         <Section id="chrome" title="Page chrome" subtitle="The header, filter and sort strip every list page is built from.">
-          <Demo label="HeaderBar + SearchBar + ViewToggle + StatPill" code="@b3tracy/base-case-productivity" padded={false}>
+          <Demo label="HeaderBar + SearchBar + ViewToggle + StatPill" code="@b3tracy/bt-professional" padded={false}>
             <HeaderBar>
               <SearchBar value={search} onChange={setSearch} placeholder="Search contacts, company, industry…" />
               <div style={{ display: 'flex', gap: 8, alignItems: 'center' }}>
@@ -293,7 +293,7 @@ export default function StyleguidePage() {
               </div>
             </div>
           </Demo>
-          <Demo label="EmptyDetail + HintText" code="@b3tracy/base-case-productivity">
+          <Demo label="EmptyDetail + HintText" code="@b3tracy/bt-professional">
             <div style={{ height: 150 }}>
               <EmptyDetail icon={<svg width="18" height="18" fill="none" stroke="var(--text-dim)" strokeWidth="1.5" viewBox="0 0 24 24"><circle cx="9" cy="7" r="4" /><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" /></svg>}>
                 Select a contact to view details
@@ -303,7 +303,7 @@ export default function StyleguidePage() {
         </Section>
 
         <Section id="detail" title="Detail pane" subtitle="Fields, badges and the interaction log used on every record.">
-          <Demo label="Field / RequiredField / WebsiteField" code=".fields-grid + <Field /> from @b3tracy/base-case-productivity">
+          <Demo label="Field / RequiredField / WebsiteField" code=".fields-grid + <Field /> from @b3tracy/bt-professional">
             <div className="section" style={{ paddingTop: 0 }}>
               <div className="section-title">Details</div>
               <div className="fields-grid">

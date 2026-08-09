@@ -1,7 +1,7 @@
 {
-  "name": "@b3tracy/base-case-productivity",
+  "name": "@b3tracy/bt-professional",
   "version": "1.0.0",
-  "description": "Base Case Productivity \u2014 dense, dark-first productivity UI: design tokens, CSS classes and React components.",
+  "description": "BT Professional \u2014 dense, dark-first productivity UI: design tokens, CSS classes and React components.",
   "license": "MIT",
   "author": "Ben Tracy",
   "repository": {
@@ -40,7 +40,7 @@
     "./swipe": {
       "default": "./dist/lib/swipe.js"
     },
-    "./styles.css": "./styles/base-case.css",
+    "./styles.css": "./styles/bt-professional.css",
     "./fonts.css": "./styles/fonts.css",
     "./tokens.json": "./tokens.json",
     "./package.json": "./package.json"

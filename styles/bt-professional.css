@@ -1,4 +1,4 @@
-/* Base Case Productivity — tokens, resets and global classes.
+/* BT Professional — tokens, resets and global classes.
    Import this before any app stylesheet so app rules win the cascade.
    Fonts are loaded separately: import '@b3tracy/base-case-productivity/fonts.css'
    (or use next/font/google in Next.js apps — see AGENTS.md). */

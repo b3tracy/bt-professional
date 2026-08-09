@@ -1,5 +1,5 @@
 {
-  "name": "base-case-productivity-docs",
+  "name": "bt-professional-docs",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -8,7 +8,7 @@
     "build": "next build"
   },
   "dependencies": {
-    "@b3tracy/base-case-productivity": "file:..",
+    "@b3tracy/bt-professional": "file:..",
     "next": "16.1.6",
     "react": "19.2.3",
     "react-dom": "19.2.3"
