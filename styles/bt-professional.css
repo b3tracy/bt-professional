@@ -55,26 +55,26 @@
      a pill sits on a card, so .theme-light is a pale tint with darker text rather
      than these inverted. Every pair meets WCAG AA (4.5:1) at the small sizes
      badges use; the smallest is 4.65:1. Verify any replacement. */
-  --badge-slate-bg:   #1b2128;
-  --badge-slate-fg:   #93A1B0;
-  --badge-blue-bg:    #182530;
-  --badge-blue-fg:    #7a9ab5;
-  --badge-indigo-bg:  #1c2233;
-  --badge-indigo-fg:  #8994B8;
-  --badge-violet-bg:  #221f33;
-  --badge-violet-fg:  #9b8ec4;
-  --badge-purple-bg:  #271f33;
-  --badge-purple-fg:  #A98EC4;
-  --badge-tan-bg:     #2a2317;
-  --badge-tan-fg:     #b4966a;
-  --badge-teal-bg:    #14262a;
-  --badge-teal-fg:    #6BB3AC;
-  --badge-green-bg:   #16251c;
-  --badge-green-fg:   #6FAF8A;
-  --badge-red-bg:     #2b1e1e;
-  --badge-red-fg:     #d16c6c;
-  --badge-grey-bg:    #212326;
-  --badge-grey-fg:    #9CA3AF;
+  --badge-slate-bg:   #1b2430;
+  --badge-slate-fg:   #A8BACE;
+  --badge-sky-bg:     #0C2739;
+  --badge-sky-fg:     #49B4F2;
+  --badge-blue-bg:    #161F4A;
+  --badge-blue-fg:    #7B93FF;
+  --badge-violet-bg:  #251A47;
+  --badge-violet-fg:  #B08CFA;
+  --badge-magenta-bg: #361A39;
+  --badge-magenta-fg: #F075CB;
+  --badge-amber-bg:   #301F05;
+  --badge-amber-fg:   #F2A833;
+  --badge-teal-bg:    #08292A;
+  --badge-teal-fg:    #22D6C4;
+  --badge-green-bg:   #0D2B18;
+  --badge-green-fg:   #45E07E;
+  --badge-red-bg:     #361616;
+  --badge-red-fg:     #FF7676;
+  --badge-grey-bg:    #171A1D;
+  --badge-grey-fg:    #868D96;
 }
 
 /* Light content theme — applied to the main content area, sidebar stays dark */
@@ -98,26 +98,26 @@
   --text-muted: #52565C;
   --text-dim:   #82868D;
 
-  --badge-slate-bg:   #E7EAEE;
-  --badge-slate-fg:   #455160;
-  --badge-blue-bg:    #E2EAF0;
-  --badge-blue-fg:    #3A5570;
-  --badge-indigo-bg:  #E4E7F0;
-  --badge-indigo-fg:  #414B70;
-  --badge-violet-bg:  #E8E5F1;
-  --badge-violet-fg:  #544A75;
-  --badge-purple-bg:  #EBE4F2;
-  --badge-purple-fg:  #5E4478;
-  --badge-tan-bg:     #F0E9DD;
-  --badge-tan-fg:     #6B5227;
-  --badge-teal-bg:    #DEEBE9;
-  --badge-teal-fg:    #265E58;
-  --badge-green-bg:   #E1EDE5;
-  --badge-green-fg:   #2C6046;
-  --badge-red-bg:     #F3E2E2;
-  --badge-red-fg:     #8E3131;
-  --badge-grey-bg:    #E8E9EB;
-  --badge-grey-fg:    #4E535A;
+  --badge-slate-bg:   #E3E9F0;
+  --badge-slate-fg:   #3B4B5E;
+  --badge-sky-bg:     #D6EDFB;
+  --badge-sky-fg:     #0A5C8C;
+  --badge-blue-bg:    #DFE3FE;
+  --badge-blue-fg:    #2536C4;
+  --badge-violet-bg:  #ECE0FD;
+  --badge-violet-fg:  #6A24D8;
+  --badge-magenta-bg: #FBDEF1;
+  --badge-magenta-fg: #A11577;
+  --badge-amber-bg:   #FBE7C3;
+  --badge-amber-fg:   #8A4A02;
+  --badge-teal-bg:    #CDF0EC;
+  --badge-teal-fg:    #065E55;
+  --badge-green-bg:   #D4F0DC;
+  --badge-green-fg:   #116836;
+  --badge-red-bg:     #FCDEDE;
+  --badge-red-fg:     #B31111;
+  --badge-grey-bg:    #E6E7E9;
+  --badge-grey-fg:    #5A5F66;
 }
 
 .theme-light input[type="date"] {

@@ -5,7 +5,7 @@
 // tokens.json from this file and fails if a token is missing from the stylesheet.
 
 export const THEME_NAME = 'BT Professional';
-export const THEME_VERSION = '1.1.0';
+export const THEME_VERSION = '2.0.0';
 export const THEME_DESCRIPTION =
   'Dense, low-chrome productivity UI: near-black depth hierarchy, a single muted sage accent, ' +
   'Figtree for display type and DM Sans for everything else, small radii and 28-32px controls.';
@@ -82,28 +82,28 @@ export const COLOR_GROUPS = [
   },
   {
     name: 'Badges',
-    note: 'Status pill pairs, desaturated like the semantic hues so status never outshouts the accent. Theme-aware: a pill sits on a card, so the light theme is a pale tint with darker text rather than the dark theme inverted. Every pair meets WCAG AA (4.5:1) for small text, the smallest being 4.65:1 — check any replacement before shipping it.',
+    note: 'Status pill pairs, one per hue, for both themes. More chromatic than the semantic hues on purpose: ten statuses have to be told apart at 9-10px, and the desaturated register could not do it - its closest pairs sat at 0.014 in OKLab, below the just-noticeable threshold. Hues are spread around the wheel rather than clustered, the two neutrals are separated by lightness, and every pair clears WCAG AA (worst 5.20:1). Closest pair is now 0.066. Measure both before changing anything here.',
     tokens: [
-      { token: '--badge-slate-bg', dark: '#1b2128', light: '#E7EAEE', usage: 'Neutral / not started — pill background' },
-      { token: '--badge-slate-fg', dark: '#93A1B0', light: '#455160', usage: 'Neutral / not started — pill text' },
-      { token: '--badge-blue-bg', dark: '#182530', light: '#E2EAF0', usage: 'Informational, early stage — pill background' },
-      { token: '--badge-blue-fg', dark: '#7a9ab5', light: '#3A5570', usage: 'Informational, early stage — pill text' },
-      { token: '--badge-indigo-bg', dark: '#1c2233', light: '#E4E7F0', usage: 'Between blue and violet in a sequence — pill background' },
-      { token: '--badge-indigo-fg', dark: '#8994B8', light: '#414B70', usage: 'Between blue and violet in a sequence — pill text' },
-      { token: '--badge-violet-bg', dark: '#221f33', light: '#E8E5F1', usage: 'In progress — pill background' },
-      { token: '--badge-violet-fg', dark: '#9b8ec4', light: '#544A75', usage: 'In progress — pill text' },
-      { token: '--badge-purple-bg', dark: '#271f33', light: '#EBE4F2', usage: 'In progress, later than violet — pill background' },
-      { token: '--badge-purple-fg', dark: '#A98EC4', light: '#5E4478', usage: 'In progress, later than violet — pill text' },
-      { token: '--badge-tan-bg', dark: '#2a2317', light: '#F0E9DD', usage: 'Awaiting a counterparty — pill background' },
-      { token: '--badge-tan-fg', dark: '#b4966a', light: '#6B5227', usage: 'Awaiting a counterparty — pill text' },
-      { token: '--badge-teal-bg', dark: '#14262a', light: '#DEEBE9', usage: 'Near-complete — pill background' },
-      { token: '--badge-teal-fg', dark: '#6BB3AC', light: '#265E58', usage: 'Near-complete — pill text' },
-      { token: '--badge-green-bg', dark: '#16251c', light: '#E1EDE5', usage: 'Complete / positive — pill background' },
-      { token: '--badge-green-fg', dark: '#6FAF8A', light: '#2C6046', usage: 'Complete / positive — pill text' },
-      { token: '--badge-red-bg', dark: '#2b1e1e', light: '#F3E2E2', usage: 'Lost / failed — pill background' },
-      { token: '--badge-red-fg', dark: '#d16c6c', light: '#8E3131', usage: 'Lost / failed — pill text' },
-      { token: '--badge-grey-bg', dark: '#212326', light: '#E8E9EB', usage: 'Inactive / archived — pill background' },
-      { token: '--badge-grey-fg', dark: '#9CA3AF', light: '#4E535A', usage: 'Inactive / archived — pill text' },
+      { token: '--badge-slate-bg', dark: '#1b2430', light: '#E3E9F0', usage: 'Neutral / not started — pill background' },
+      { token: '--badge-slate-fg', dark: '#A8BACE', light: '#3B4B5E', usage: 'Neutral / not started — pill text' },
+      { token: '--badge-sky-bg', dark: '#0C2739', light: '#D6EDFB', usage: 'Early, informational — pill background' },
+      { token: '--badge-sky-fg', dark: '#49B4F2', light: '#0A5C8C', usage: 'Early, informational — pill text' },
+      { token: '--badge-blue-bg', dark: '#161F4A', light: '#DFE3FE', usage: 'Informational, a step on from sky — pill background' },
+      { token: '--badge-blue-fg', dark: '#7B93FF', light: '#2536C4', usage: 'Informational, a step on from sky — pill text' },
+      { token: '--badge-violet-bg', dark: '#251A47', light: '#ECE0FD', usage: 'In progress — pill background' },
+      { token: '--badge-violet-fg', dark: '#B08CFA', light: '#6A24D8', usage: 'In progress — pill text' },
+      { token: '--badge-magenta-bg', dark: '#361A39', light: '#FBDEF1', usage: 'In progress, later than violet — pill background' },
+      { token: '--badge-magenta-fg', dark: '#F075CB', light: '#A11577', usage: 'In progress, later than violet — pill text' },
+      { token: '--badge-amber-bg', dark: '#301F05', light: '#FBE7C3', usage: 'Awaiting a counterparty — pill background' },
+      { token: '--badge-amber-fg', dark: '#F2A833', light: '#8A4A02', usage: 'Awaiting a counterparty — pill text' },
+      { token: '--badge-teal-bg', dark: '#08292A', light: '#CDF0EC', usage: 'Near-complete — pill background' },
+      { token: '--badge-teal-fg', dark: '#22D6C4', light: '#065E55', usage: 'Near-complete — pill text' },
+      { token: '--badge-green-bg', dark: '#0D2B18', light: '#D4F0DC', usage: 'Complete / positive — pill background' },
+      { token: '--badge-green-fg', dark: '#45E07E', light: '#116836', usage: 'Complete / positive — pill text' },
+      { token: '--badge-red-bg', dark: '#361616', light: '#FCDEDE', usage: 'Lost / failed — pill background' },
+      { token: '--badge-red-fg', dark: '#FF7676', light: '#B31111', usage: 'Lost / failed — pill text' },
+      { token: '--badge-grey-bg', dark: '#171A1D', light: '#E6E7E9', usage: 'Inactive / archived — pill background' },
+      { token: '--badge-grey-fg', dark: '#868D96', light: '#5A5F66', usage: 'Inactive / archived — pill text' },
     ],
   },
   {

@@ -1,5 +1,28 @@
 # Changelog
 
+## 2.0.0
+
+Badge hues are rebuilt for distinguishability. **Breaking:** `--badge-indigo-*`,
+`--badge-purple-*` and `--badge-tan-*` are gone, replaced by `--badge-sky-*`,
+`--badge-magenta-*` and `--badge-amber-*`.
+
+1.1.0 kept the badges in the desaturated semantic register, and at pill sizes that failed
+its own purpose: the closest pairs measured 0.014 in OKLab, at or below the just-noticeable
+threshold. Slate and grey were indistinguishable, so were violet and purple, and blue and
+indigo. Ten statuses that cannot be told apart are not ten statuses.
+
+- Hues are spread around the wheel instead of clustered - four crowded blue-purples become
+  sky, blue, violet and magenta.
+- Chroma roughly doubles (mean 0.067 to 0.132). `AGENTS.md` now records this as a
+  deliberate exception to the desaturation rule, with the reasoning, so it does not get
+  quietly reverted.
+- The two neutrals are separated by lightness rather than hue, since neither has one.
+- Closest pair goes from 0.014 to 0.066, and worst contrast *improves* from 4.65:1 to
+  5.20:1 - more colourful and more readable, not a trade.
+
+`.badge-exploring/-applied/-interviewing/-offer/-passed` keep their hues (blue, green,
+violet, teal, red all survive) and need no change, but they will look more vivid.
+
 ## 1.1.0
 
 Status badge colors are now tokens, and theme-aware.

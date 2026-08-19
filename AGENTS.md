@@ -53,6 +53,14 @@ component library (MUI, Chakra, Radix, shadcn/ui) — this design system replace
   focus rings, active filters. Never introduce a second accent hue.
 - **Semantic colors are deliberately desaturated** so status never outshouts the accent:
   `--red #d16c6c`, `--blue #7a9ab5`, `--purple #9b8ec4`, `--tan #b4966a`, `--gold #c4a97a`.
+- **Status badges are the deliberate exception to that rule.** `--badge-<hue>-bg/-fg` are more
+  chromatic than the semantic hues, because a pipeline with ten states has to be readable at
+  9-10px and the desaturated register could not carry it: its closest pairs measured 0.014 in
+  OKLab, at or below the just-noticeable threshold, so half the statuses looked identical. The
+  badge hues are spread around the wheel rather than clustered, the two neutrals are separated by
+  lightness, every pair clears WCAG AA (worst 5.20:1) and the closest pair is 0.066. Do not
+  desaturate them back to match the semantic tokens - measure contrast and OKLab separation
+  before changing any of them.
 - **Depth hierarchy**, darkest to lightest: `--surface` (sidebar/modals) → `--bg` (page) →
   `--surface2` (cards) → `--surface3` (elevated/active rows).
 - **Small radii:** `--radius-sm 6px` (inputs), `--radius 8px` (buttons/cards),
