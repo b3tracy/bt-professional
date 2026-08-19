@@ -50,6 +50,31 @@
   --table-header-border: #2e3440;
   --row-even:           #13161B;
   --row-odd:            #161A20;
+
+  /* Status badges. Desaturated like the semantic hues above, and theme-aware:
+     a pill sits on a card, so .theme-light is a pale tint with darker text rather
+     than these inverted. Every pair meets WCAG AA (4.5:1) at the small sizes
+     badges use; the smallest is 4.65:1. Verify any replacement. */
+  --badge-slate-bg:   #1b2128;
+  --badge-slate-fg:   #93A1B0;
+  --badge-blue-bg:    #182530;
+  --badge-blue-fg:    #7a9ab5;
+  --badge-indigo-bg:  #1c2233;
+  --badge-indigo-fg:  #8994B8;
+  --badge-violet-bg:  #221f33;
+  --badge-violet-fg:  #9b8ec4;
+  --badge-purple-bg:  #271f33;
+  --badge-purple-fg:  #A98EC4;
+  --badge-tan-bg:     #2a2317;
+  --badge-tan-fg:     #b4966a;
+  --badge-teal-bg:    #14262a;
+  --badge-teal-fg:    #6BB3AC;
+  --badge-green-bg:   #16251c;
+  --badge-green-fg:   #6FAF8A;
+  --badge-red-bg:     #2b1e1e;
+  --badge-red-fg:     #d16c6c;
+  --badge-grey-bg:    #212326;
+  --badge-grey-fg:    #9CA3AF;
 }
 
 /* Light content theme — applied to the main content area, sidebar stays dark */
@@ -72,6 +97,27 @@
   --text:       #17191B;
   --text-muted: #52565C;
   --text-dim:   #82868D;
+
+  --badge-slate-bg:   #E7EAEE;
+  --badge-slate-fg:   #455160;
+  --badge-blue-bg:    #E2EAF0;
+  --badge-blue-fg:    #3A5570;
+  --badge-indigo-bg:  #E4E7F0;
+  --badge-indigo-fg:  #414B70;
+  --badge-violet-bg:  #E8E5F1;
+  --badge-violet-fg:  #544A75;
+  --badge-purple-bg:  #EBE4F2;
+  --badge-purple-fg:  #5E4478;
+  --badge-tan-bg:     #F0E9DD;
+  --badge-tan-fg:     #6B5227;
+  --badge-teal-bg:    #DEEBE9;
+  --badge-teal-fg:    #265E58;
+  --badge-green-bg:   #E1EDE5;
+  --badge-green-fg:   #2C6046;
+  --badge-red-bg:     #F3E2E2;
+  --badge-red-fg:     #8E3131;
+  --badge-grey-bg:    #E8E9EB;
+  --badge-grey-fg:    #4E535A;
 }
 
 .theme-light input[type="date"] {
@@ -283,11 +329,14 @@ input[type="date"]::-webkit-datetime-edit-year-field:focus {
 
 /* ── Badges ──────────────────────────────────────── */
 .li-badge { font-size: 10px; font-weight: 600; letter-spacing: 0.04em; text-transform: uppercase; border-radius: 3px; padding: 2px 6px; }
-.badge-exploring    { background: rgba(122,154,181,0.12); color: var(--blue); }
-.badge-applied      { background: rgba(111,175,138,0.12); color: var(--accent); }
-.badge-interviewing { background: rgba(155,142,196,0.12); color: var(--purple); }
-.badge-offer        { background: rgba(111,175,138,0.14); color: var(--green); }
-.badge-passed       { background: rgba(209,108,108,0.12); color: var(--red); }
+/* Hue per status is unchanged; the colours now come from the badge tokens so they
+   adapt to .theme-light. Previously a 12% tint plus the semantic token as text, which
+   sat at 2.6-3.1:1 on a white card - below AA, and unreadable at 10px. */
+.badge-exploring    { background: var(--badge-blue-bg); color: var(--badge-blue-fg); }
+.badge-applied      { background: var(--badge-green-bg); color: var(--badge-green-fg); }
+.badge-interviewing { background: var(--badge-violet-bg); color: var(--badge-violet-fg); }
+.badge-offer        { background: var(--badge-teal-bg); color: var(--badge-teal-fg); }
+.badge-passed       { background: var(--badge-red-bg); color: var(--badge-red-fg); }
 
 /* ── Modal ───────────────────────────────────────── */
 .modal-overlay {

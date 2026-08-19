@@ -5,7 +5,7 @@
 // tokens.json from this file and fails if a token is missing from the stylesheet.
 
 export const THEME_NAME = 'BT Professional';
-export const THEME_VERSION = '1.0.0';
+export const THEME_VERSION = '1.1.0';
 export const THEME_DESCRIPTION =
   'Dense, low-chrome productivity UI: near-black depth hierarchy, a single muted sage accent, ' +
   'Figtree for display type and DM Sans for everything else, small radii and 28-32px controls.';
@@ -78,6 +78,32 @@ export const COLOR_GROUPS = [
       { token: '--purple', dark: '#9b8ec4', light: '#9b8ec4', usage: 'In-progress states' },
       { token: '--tan', dark: '#b4966a', light: '#b4966a', usage: 'Email tag' },
       { token: '--gold', dark: '#c4a97a', light: '#c4a97a', usage: 'Charts' },
+    ],
+  },
+  {
+    name: 'Badges',
+    note: 'Status pill pairs, desaturated like the semantic hues so status never outshouts the accent. Theme-aware: a pill sits on a card, so the light theme is a pale tint with darker text rather than the dark theme inverted. Every pair meets WCAG AA (4.5:1) for small text, the smallest being 4.65:1 — check any replacement before shipping it.',
+    tokens: [
+      { token: '--badge-slate-bg', dark: '#1b2128', light: '#E7EAEE', usage: 'Neutral / not started — pill background' },
+      { token: '--badge-slate-fg', dark: '#93A1B0', light: '#455160', usage: 'Neutral / not started — pill text' },
+      { token: '--badge-blue-bg', dark: '#182530', light: '#E2EAF0', usage: 'Informational, early stage — pill background' },
+      { token: '--badge-blue-fg', dark: '#7a9ab5', light: '#3A5570', usage: 'Informational, early stage — pill text' },
+      { token: '--badge-indigo-bg', dark: '#1c2233', light: '#E4E7F0', usage: 'Between blue and violet in a sequence — pill background' },
+      { token: '--badge-indigo-fg', dark: '#8994B8', light: '#414B70', usage: 'Between blue and violet in a sequence — pill text' },
+      { token: '--badge-violet-bg', dark: '#221f33', light: '#E8E5F1', usage: 'In progress — pill background' },
+      { token: '--badge-violet-fg', dark: '#9b8ec4', light: '#544A75', usage: 'In progress — pill text' },
+      { token: '--badge-purple-bg', dark: '#271f33', light: '#EBE4F2', usage: 'In progress, later than violet — pill background' },
+      { token: '--badge-purple-fg', dark: '#A98EC4', light: '#5E4478', usage: 'In progress, later than violet — pill text' },
+      { token: '--badge-tan-bg', dark: '#2a2317', light: '#F0E9DD', usage: 'Awaiting a counterparty — pill background' },
+      { token: '--badge-tan-fg', dark: '#b4966a', light: '#6B5227', usage: 'Awaiting a counterparty — pill text' },
+      { token: '--badge-teal-bg', dark: '#14262a', light: '#DEEBE9', usage: 'Near-complete — pill background' },
+      { token: '--badge-teal-fg', dark: '#6BB3AC', light: '#265E58', usage: 'Near-complete — pill text' },
+      { token: '--badge-green-bg', dark: '#16251c', light: '#E1EDE5', usage: 'Complete / positive — pill background' },
+      { token: '--badge-green-fg', dark: '#6FAF8A', light: '#2C6046', usage: 'Complete / positive — pill text' },
+      { token: '--badge-red-bg', dark: '#2b1e1e', light: '#F3E2E2', usage: 'Lost / failed — pill background' },
+      { token: '--badge-red-fg', dark: '#d16c6c', light: '#8E3131', usage: 'Lost / failed — pill text' },
+      { token: '--badge-grey-bg', dark: '#212326', light: '#E8E9EB', usage: 'Inactive / archived — pill background' },
+      { token: '--badge-grey-fg', dark: '#9CA3AF', light: '#4E535A', usage: 'Inactive / archived — pill text' },
     ],
   },
   {
