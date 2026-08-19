@@ -1,7 +1,7 @@
 {
   "name": "@b3tracy/bt-professional",
-  "version": "1.0.0",
-  "description": "BT Professional \u2014 dense, dark-first productivity UI: design tokens, CSS classes and React components.",
+  "version": "1.1.0",
+  "description": "BT Professional — dense, dark-first productivity UI: design tokens, CSS classes and React components.",
   "license": "MIT",
   "author": "Ben Tracy",
   "repository": {
