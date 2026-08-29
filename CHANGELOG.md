@@ -1,5 +1,12 @@
 # Changelog
 
+## 2.0.1
+
+`useUndoableDelete().undo()` restored twice per click under React StrictMode: `restore`
+ran inside a `setPending` updater, and React invokes updaters more than once in
+development. The pending payload is now mirrored in a ref, so `undo` reads and clears it
+outside the updater and calls `restore` exactly once.
+
 ## 2.0.0
 
 Badge hues are rebuilt for distinguishability. **Breaking:** `--badge-indigo-*`,
