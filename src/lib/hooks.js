@@ -131,24 +131,29 @@ export function useUndoableDelete(delayMs = 5000) {
   const [pending, setPending] = useState(null);
   const timerRef = useRef(null);
   const restoreRef = useRef(null);
+  // The payload is mirrored in a ref so `undo` can read it without running
+  // `restore` inside a state updater, which React invokes twice in dev.
+  const pendingRef = useRef(null);
 
   const schedule = useCallback((payload, { commit, restore }) => {
     if (timerRef.current) clearTimeout(timerRef.current);
     restoreRef.current = restore;
+    pendingRef.current = payload;
     setPending(payload);
     timerRef.current = setTimeout(async () => {
+      pendingRef.current = null;
       await commit(payload);
       setPending(null);
     }, delayMs);
   }, [delayMs]);
 
   const undo = useCallback(() => {
-    setPending(current => {
-      if (!current) return current;
-      clearTimeout(timerRef.current);
-      restoreRef.current?.(current);
-      return null;
-    });
+    const current = pendingRef.current;
+    if (!current) return;
+    pendingRef.current = null;
+    clearTimeout(timerRef.current);
+    restoreRef.current?.(current);
+    setPending(null);
   }, []);
 
   return { pending, schedule, undo };

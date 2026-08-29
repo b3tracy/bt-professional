@@ -5,7 +5,7 @@
 // tokens.json from this file and fails if a token is missing from the stylesheet.
 
 export const THEME_NAME = 'BT Professional';
-export const THEME_VERSION = '2.0.0';
+export const THEME_VERSION = '2.0.1';
 export const THEME_DESCRIPTION =
   'Dense, low-chrome productivity UI: near-black depth hierarchy, a single muted sage accent, ' +
   'Figtree for display type and DM Sans for everything else, small radii and 28-32px controls.';
